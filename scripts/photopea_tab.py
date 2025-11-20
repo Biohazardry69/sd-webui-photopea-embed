@@ -28,6 +28,7 @@ def on_ui_tabs():
                 src = "{PHOTOPEA_MAIN_URL}{get_photopea_url_params()}" 
                 width = "{PHOTOPEA_IFRAME_WIDTH}" 
                 height = "{PHOTOPEA_IFRAME_HEIGHT}"
+                allowfullscreen
                 onload = "{PHOTOPEA_IFRAME_LOADED_EVENT}(this)">"""
             )
         with gr.Row():
@@ -79,6 +80,7 @@ def on_ui_tabs():
                 )
             with gr.Column():
                 send_selection_inpaint = gr.Button(value="Inpaint selection")
+                fullscreen_btn = gr.Button(value='Fullscreen')
 
         with gr.Row():
             gr.HTML(
@@ -113,6 +115,12 @@ def on_ui_tabs():
             _js="(i) => {getAndSendImageToWebUITab('img2img', true, i)}",
         )
         send_selection_inpaint.click(fn=None, _js="sendImageWithMaskSelectionToWebUi")
+        fullscreen_btn.click(
+            None,
+            select_target_index,
+            None,
+            _js="photopeaFullscreen",
+        )
 
     return [(photopea_tab, "Photopea", "photopea_embed")]
 
