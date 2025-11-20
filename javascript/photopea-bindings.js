@@ -325,3 +325,17 @@ function controlNetAccordionIsCollapsed(controlNetDiv) {
     // this heuristic, we just return false.
     return false;
 }
+
+// MODIFICATION: Fullscreen functionality
+function photopeaFullscreen() {
+    const iframe = document.getElementById("webui-photopea-iframe");
+    if (!iframe) return;
+
+    if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+    } else if (iframe.webkitRequestFullscreen) { /* Safari */
+        iframe.webkitRequestFullscreen();
+    } else if (iframe.msRequestFullscreen) { /* IE11 */
+        iframe.msRequestFullscreen();
+    }
+}
