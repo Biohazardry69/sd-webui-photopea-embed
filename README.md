@@ -52,6 +52,9 @@ You can also copy and paste the generated results normally into Photopea, and ha
 
 ## Changelog
 
+### 2025-11-20
+- Added a full-screen button to the Photopea tab
+
 ### 2023-09-30
 - Fixes a bug that would not properly show ControlNet index dropdown
 - Fixes a bug where it would not be possible to send to different ControlNet units
@@ -95,3 +98,4 @@ You agree not to use the extension or derivatives of the extension:
 
 - To generate or disseminate information for the purpose to be used for administration of justice, law enforcement, immigration or asylum processes, such as predicting an individual will commit fraud/crime commitment (e.g. by text profiling, drawing causal relationships between assertions made in documents, indiscriminate and arbitrarily-targeted use).
 -----
+
